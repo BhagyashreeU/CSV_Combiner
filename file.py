@@ -1,6 +1,5 @@
 import sys
 
-
 class File:
     __filename = ""
     __cols = ""
@@ -25,11 +24,3 @@ class File:
         with open(self.__filename, 'r') as infile:
             self.__cols = infile.readline();
         infile.closed
-
-
-
-
-
-
-
-
