@@ -15,7 +15,8 @@ class File:
             for lines in infile:
                 if self.__cols == lines:
                     continue
-                infile.closed
+                sys.stdout.write(lines.strip() + ',\"' + self.__name.split('/')[-1] + '\"\n')
+            infile.closed
 
     def define_cols(self):
         return self.__cols

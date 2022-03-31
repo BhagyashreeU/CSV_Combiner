@@ -10,6 +10,7 @@ import filecmp
 class CombineCSVTest(unittest.TestCase):
     # initialize all paths
     output_file = "./output_file.csv"
+    happy_path_expected_file = "./fixtures/happy_path_expected_file.csv"
     csv_c_path = "./csv_combiner.py"
     accessories_path = "./test_fixtures/accessories.csv"
     clothing_test_file = "./test_fixtures/clothing.csv"
