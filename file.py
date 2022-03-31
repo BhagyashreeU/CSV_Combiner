@@ -4,24 +4,24 @@ class File:
     __filename = ""
     __cols = ""
 
-    def __init__(self, name):
-        self.__filename = name
-
-    def define_name(self):
-        return self.__filename
-
     def write_to_stdout(self):
         with open(self.__filename, 'r') as infile:
             for lines in infile:
                 if self.__cols == lines:
                     continue
-                sys.stdout.write(lines.strip() + ',\"' + self.__name.split('/')[-1] + '\"\n')
+                sys.stdout.write(lines.strip() + ',\"' + self.__filename.split('/')[-1] + '\"\n')
             infile.closed
 
-    def define_cols(self):
+    def get_cols(self):
         return self.__cols
 
-    def store_cols(self):
+    def set_cols(self):
+        if self.__cols != "":
+            return
         with open(self.__filename, 'r') as infile:
-            self.__cols = infile.readline();
+            self.__cols = infile.readline()
         infile.closed
+
+    def __init__(self, name):
+        self.__filename = name
+        self.set_cols()
