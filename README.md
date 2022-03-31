@@ -4,7 +4,7 @@ This Task takes several CSV files as arguments. Each CSV file (found in the fixt
 
 # Execution
 
-    python ./csv_combiner.py ./fixtures/accessories.csv ./fixtures/clothing.csv > output.csv
+    python csv_combiner.py ./fixtures/accessories.csv ./fixtures/clothing.csv > output.csv
     
 # Unit test Execution
 
